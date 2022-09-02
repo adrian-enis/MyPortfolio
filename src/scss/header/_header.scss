@@ -1,0 +1,137 @@
+@use 'base/variables' as v;
+
+.hero {
+    height: 100vh;
+    background-image: url(../img/img-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    &:before {
+        content: '';
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: v.$negro;
+        opacity: .6;
+        position: absolute;
+    }
+}
+.hero-content {
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    background-color: v.$negro_elegante;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.h1 {
+    padding: 1.2rem;
+    
+    a {
+        color: v.$blanco;
+    }
+}
+
+.button {
+    cursor: pointer;
+    border: none;
+    border-radius: .4rem;
+    margin: 1.2rem;
+    transition: 2s;
+    &:hover {
+        background-color: v.$negro_elegante;
+    }
+    .svg {
+        fill: v.$negro;
+        width: 2.5rem;
+        height: 2.5rem;
+
+        &:hover {
+            transition: 2s;
+            fill: v.$blanco;
+        }
+    }
+}
+
+.nav {
+    width: 100%;
+ 
+    transition: all .5s ease;
+    height: 0;
+    // display: none;   
+    overflow: hidden;   //cual es su funcion?
+}
+.nav.active {
+    height:50vh ;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    li {
+        color: v.$blanco;  
+        width: 100%;
+        text-align: center;
+        padding: 3.6rem;
+        transition: 2s;
+        &:hover {
+            background-color: blue;
+        }
+    }
+}
+
+@media (min-width:768px){
+
+    .header {
+
+        .h1 {
+            margin-left: 2rem;
+            font-size: 4rem;
+        }
+    }
+    .nav {
+        width: 50%;
+    }
+    .button {
+        display: none;
+    }
+    .ul {
+        flex-direction: row;
+        li {
+            padding: 0;
+            margin-left: 1rem;
+        }
+    }
+    .nav.active {
+        height: auto;
+    }
+}
+
+@media (min-width:1024px){
+    .header {
+        background-color: v.$blanco;
+    }
+    .h1 {
+
+        a {
+            color: v.$negro;
+        }
+    }
+
+    .nav {
+
+    }
+
+    .ul {
+        a {
+            color: v.$negro;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@use 'variables' as v;
+
+.h1,.h2 {
+    font-family: v.$fuente_principal;
+    margin: 0;
+}
+
+a {
+    font-family: v.$fuente_secundaria;
+    color: v.$blanco;
+}

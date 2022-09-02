@@ -1,0 +1,39 @@
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*,*:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor{
+    width: 95%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
